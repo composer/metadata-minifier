@@ -28,6 +28,9 @@ jobs:
           - "7.4"
           - "8.0"
           - "8.1"
+          - "8.2"
+          - "8.3"
+          - "8.4"
 
     steps:
       - name: "Checkout"
@@ -41,7 +44,7 @@ jobs:
 
       - name: Get composer cache directory
         id: composercache
-        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+        run: "echo \"dir=$(composer config cache-files-dir)\" >> $GITHUB_OUTPUT"
 
       - name: Cache dependencies
         uses: actions/cache@v2
