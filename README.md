@@ -12,7 +12,7 @@ Installation
 Install the latest version with:
 
 ```bash
-$ composer require composer/metadata-minifier
+composer require composer/metadata-minifier
 ```
 
 
