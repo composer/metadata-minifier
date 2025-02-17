@@ -24,7 +24,7 @@ class MetadataMinifierTest extends TestCase
     public function testMinifyExpand()
     {
         $package1 = new CompletePackage('foo/bar', '2.0.0.0', '2.0.0');
-        $package1->setScripts(array('foo' => 'bar'));
+        $package1->setScripts(array('foo' => ['bar']));
         $package1->setLicense(array('MIT'));
         $package2 = new CompletePackage('foo/bar', '1.2.0.0', '1.2.0');
         $package2->setLicense(array('GPL'));

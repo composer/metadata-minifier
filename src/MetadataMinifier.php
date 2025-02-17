@@ -16,8 +16,8 @@ class MetadataMinifier
     /**
      * Expands an array of minified versions back to their original format
      *
-     * @param array[] $versions A list of minified version arrays
-     * @return array[] A list of version arrays
+     * @param list<mixed> $versions A list of minified version arrays
+     * @return list<mixed> A list of version arrays
      */
     public static function expand(array $versions)
     {
@@ -48,8 +48,8 @@ class MetadataMinifier
     /**
      * Minifies an array of versions into a set of version diffs
      *
-     * @param array[] $versions A list of version arrays
-     * @return array[] A list of versions minified with each array only containing the differences to the previous one
+     * @param list<mixed> $versions A list of version arrays
+     * @return list<mixed> A list of versions minified with each array only containing the differences to the previous one
      */
     public static function minify(array $versions)
     {
