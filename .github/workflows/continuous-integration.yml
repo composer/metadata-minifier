@@ -10,6 +10,7 @@ permissions:
 env:
   COMPOSER_FLAGS: "--ansi --no-interaction --no-progress --prefer-dist"
   SYMFONY_PHPUNIT_REMOVE_RETURN_TYPEHINT: "1"
+  COMPOSER_ROOT_VERSION: "1.x-dev"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

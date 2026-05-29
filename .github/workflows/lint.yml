@@ -11,6 +11,9 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  COMPOSER_ROOT_VERSION: "1.x-dev"
+
 jobs:
   tests:
     name: "Lint"
