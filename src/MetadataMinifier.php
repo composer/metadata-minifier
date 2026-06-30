@@ -67,7 +67,7 @@ class MetadataMinifier
 
             // add any changes from the previous version
             foreach ($version as $key => $val) {
-                if (!isset($lastKnownVersionData[$key]) || $lastKnownVersionData[$key] !== $val) {
+                if (!array_key_exists($key, $lastKnownVersionData) || $lastKnownVersionData[$key] !== $val) {
                     $minifiedVersion[$key] = $val;
                     $lastKnownVersionData[$key] = $val;
                 }
@@ -75,7 +75,7 @@ class MetadataMinifier
 
             // store any deletions from the previous version for keys missing in current one
             foreach ($lastKnownVersionData as $key => $val) {
-                if (!isset($version[$key])) {
+                if (!array_key_exists($key, $version)) {
                     $minifiedVersion[$key] = "__unset";
                     unset($lastKnownVersionData[$key]);
                 }
